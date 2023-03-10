@@ -1,13 +1,27 @@
-import { createStore } from 'redux';
+//import { createStore } from 'redux';
 import initialState from './initialState';
+import { legacy_createStore as createStore } from 'redux';
+import shortid from 'shortid';
 
 const reducer = (state, action) => {
   const dispatch = (action) => {
     state = reducer(state, action);
   };
-  if (action.type === 'ADD_COLUMN')
-    return { ...state, columns: [...state.columns, action.newColumn] };
-  return state;
+  switch (action.type) {
+    case 'ADD_COLUMN':
+      return {
+        ...state,
+        columns: [...state.columns, { ...action.newColumn, id: shortid() }],
+      };
+    default:
+      return state;
+  }
+  // if (action.type === 'ADD_COLUMN')
+  //   return {
+  //     ...state,
+  //     columns: [...state.columns, { ...action.newColumn, id: shortid() }],
+  //   };
+  // return state;
 };
 
 const store = createStore(
