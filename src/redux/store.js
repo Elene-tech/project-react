@@ -13,9 +13,15 @@ const reducer = (state, action) => {
         ...state,
         columns: [...state.columns, { ...action.newColumn, id: shortid() }],
       };
+    case 'ADD_CARD':
+      return {
+        ...state,
+        cards: [...state.cards, { ...action.newCard, id: shortid() }],
+      };
     default:
       return state;
   }
+
   // if (action.type === 'ADD_COLUMN')
   //   return {
   //     ...state,
@@ -23,7 +29,6 @@ const reducer = (state, action) => {
   //   };
   // return state;
 };
-
 const store = createStore(
   reducer,
   initialState,
