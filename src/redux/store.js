@@ -9,6 +9,7 @@ export const getFilteredCards = ({ cards, searchString }, columnId) =>
     (card) =>
       card.columnId === columnId && strContains(card.title, searchString)
   );
+export const getAllColumns = ({ columns }) => columns;
 
 const reducer = (state, action) => {
   const dispatch = (action) => {
