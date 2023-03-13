@@ -11,6 +11,10 @@ export const getFilteredCards = ({ cards, searchString }, columnId) =>
   );
 export const getAllColumns = ({ columns }) => columns;
 
+// action creators
+export const addColumn = (payload) => ({ type: 'ADD_COLUMN', payload });
+export const addCard = (payload) => ({ type: 'ADD_CARD', payload });
+
 const reducer = (state, action) => {
   const dispatch = (action) => {
     state = reducer(state, action);
