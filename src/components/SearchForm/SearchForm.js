@@ -11,7 +11,7 @@ const SearchForm = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    dispatch(addSearch({ searchLet }));
+    dispatch(addSearch(searchLet));
     setSearchLet('');
   };
 

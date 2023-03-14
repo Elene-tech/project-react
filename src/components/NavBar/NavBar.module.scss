@@ -1,1 +1,35 @@
 @import '../../styles/settings.scss';
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  background-color: darken($color-dark, 3%);
+  padding: 0 20px;
+  .check {
+    display: flex;
+  }
+  .icon {
+    color: white;
+    font-size: 24px;
+    text-decoration: none;
+    padding-top: 16px;
+    &:hover {
+      color: rgb(119, 0, 255);
+    }
+  }
+  .links {
+    display: inline-flex;
+    font-size: 16px;
+    font-weight: 600;
+    list-style-type: none;
+
+    .link {
+      text-decoration: none;
+      color: white;
+      margin-left: 10px;
+      &:hover {
+        color: rgb(119, 0, 255);
+      }
+    }
+  }
+}

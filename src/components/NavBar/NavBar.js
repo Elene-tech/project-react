@@ -2,23 +2,31 @@ import styles from './NavBar.module.scss';
 
 const NavBar = () => {
   return (
-    <div>
-      <div>
-        <a href="#">
-          <i className="fa-solid fa-list-check"></i>
+    <div className={styles.navbar}>
+      <div className={styles.check}>
+        <a href="#" className={styles.icon}>
+          <i className="fa fa-tasks"></i>
         </a>
       </div>
-      <ul>
-        <li>
-          <a href="#">Home</a>
-        </li>
-        <li>
-          <a href="#">Favorite</a>
-        </li>
-        <li>
-          <a href="#">About</a>
-        </li>
-      </ul>
+      <div>
+        <ul className={styles.links}>
+          <li>
+            <a href="#" className={styles.link}>
+              Home
+            </a>
+          </li>
+          <li>
+            <a href="#" className={styles.link}>
+              Favorite
+            </a>
+          </li>
+          <li>
+            <a href="#" className={styles.link}>
+              About
+            </a>
+          </li>
+        </ul>
+      </div>
     </div>
   );
 };
