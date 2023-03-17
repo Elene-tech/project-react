@@ -22,14 +22,13 @@
     font-size: 16px;
     font-weight: 600;
     list-style-type: none;
-
-    .link {
-      text-decoration: none;
+    a {
       color: white;
+      text-decoration: none;
       margin-left: 10px;
-      &:hover {
-        color: rgb(119, 0, 255);
-      }
+    }
+    .linkActive {
+      color: $color-warning;
     }
   }
 }
