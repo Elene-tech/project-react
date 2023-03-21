@@ -2,7 +2,7 @@ import { useState } from 'react';
 import styles from './ListForm.module.scss';
 import Button from '../Button/Button';
 import { useDispatch } from 'react-redux';
-import { addList } from '../../redux/store';
+import { addList } from '../../redux/listsReducer';
 
 const ListForm = ({ listId }) => {
   const [title, setTitle] = useState('');

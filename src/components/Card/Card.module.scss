@@ -2,28 +2,39 @@
 @import '../../styles/settings.scss';
 
 .card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
   background: $color-light;
   border: 1px solid lighten($color-dark, 60%);
   padding: $base-size;
   margin: 0 0 $base-size 0;
   border-radius: $radius;
-  font-weight: bold;
   display: flex;
   justify-content: space-between;
+  font-weight: bold;
 
-  .cardTitle {
-    color: black;
-    display: flex;
-    position: relative;
-
-    .icon {
-      display: flex;
-      font-size: 14px;
-      vertical-align: middle;
-      justify-content: space-between;
-    }
+  .fa {
+    position: absolute;
+    right: 10px;
+    font-size: 16px;
+    padding: 5px;
+    cursor: pointer;
+    transition: 0.3s;
   }
+
+  .faTrash {
+    color: $color-warning;
+  }
+
   .isFavorite {
-    color: yellow;
+    color: rgb(255, 157, 0);
+    text-shadow: 2px 2px 1px rgb(196, 196, 196);
   }
+}
+
+.cardTitle {
+  color: black;
+  display: flex;
 }
