@@ -18,22 +18,20 @@ const Card = (props) => {
   return (
     <ul className={styles.cards}>
       <li className={styles.card}>
-        <div className={styles.cardTitle}>
-          {props.title}
-          <div>
-            <span
-              className={clsx(
-                styles.icon,
-                'fa fa-star-o',
-                isFavorite && styles.isFavorite
-              )}
-              onClick={handleFavorite}
-            ></span>
-            <span
-              className={clsx(styles.fa, styles.faTrash, 'fa', 'fa-trash')}
-              onClick={removeCardFunc}
-            ></span>
-          </div>
+        {props.title}
+        <div className={styles.icons}>
+          <span
+            className={clsx(
+              styles.icon,
+              'fa fa-star-o',
+              isFavorite && styles.isFavorite
+            )}
+            onClick={handleFavorite}
+          ></span>
+          <span
+            className={clsx(styles.fa, styles.faTrash, 'fa', 'fa-trash')}
+            onClick={removeCardFunc}
+          ></span>
         </div>
       </li>
     </ul>

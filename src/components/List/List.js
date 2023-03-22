@@ -6,6 +6,7 @@ import { getListById } from '../../redux/listsReducer';
 import { useParams } from 'react-router-dom';
 import { getColumnsByList } from '../../redux/columnsReducer';
 import SearchForm from '../SearchForm/SearchForm';
+import { Navigate } from 'react-router';
 
 const List = () => {
   const { listId } = useParams();
@@ -13,6 +14,9 @@ const List = () => {
   const columns = useSelector((state) => getColumnsByList(state, listId));
   const searchString = useSelector((state) => state.searchString);
 
+  if (!listData) {
+    return <Navigate to="/" />;
+  }
   return (
     <div className={styles.list}>
       <header className={styles.header}>
