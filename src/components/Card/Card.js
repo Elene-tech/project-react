@@ -1,5 +1,4 @@
 import styles from './Card.module.scss';
-import { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import clsx from 'clsx';
 import { toggleFavorite, removeCard } from '../../redux/cardsReducer';
