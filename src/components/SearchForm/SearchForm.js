@@ -13,7 +13,7 @@ const SearchForm = () => {
     return () => {
       dispatch(addSearch(''));
     };
-  }, []);
+  }, [dispatch]);
 
   const handleSubmit = (e) => {
     e.preventDefault();
